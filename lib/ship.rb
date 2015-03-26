@@ -12,5 +12,6 @@ class Ship
   end
 
   def sunk?
+    @hit_count == @size
   end
 end

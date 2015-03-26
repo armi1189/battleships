@@ -23,5 +23,10 @@ describe Ship do
       ship.hit
       expect(ship.hit_count).to eq 1
     end
+
+    it 'can sunk' do
+      2.times { ship.hit }
+      expect(ship).to be_sunk
+    end
   end
 end
