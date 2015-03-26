@@ -30,5 +30,11 @@ describe Cell do
       cell.hit!
       expect { cell.hit! }.to raise_error
     end
+
+    it 'can hit what is containing' do
+      cell.container = ship
+      allow(ship).to receive(:hit)
+      cell.hit!
+    end
   end
 end
