@@ -8,6 +8,7 @@ class Cell
 
   def hit!
     fail 'You can\'t hit the same cell twice' if @hit
+    container.hit if container
     @hit = true
   end
 
