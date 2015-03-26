@@ -1,8 +1,9 @@
 class Board
   attr_reader :grid
 
-  def initialize
-    @size = 10
+  DEFAULT_SIZE = 10
+  def initialize(options = {})
+    @size = options.fetch(:size, DEFAULT_SIZE)
     @grid = {}
     initialize_grid @size
   end
