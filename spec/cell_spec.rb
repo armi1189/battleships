@@ -15,5 +15,10 @@ describe Cell do
       cell.container = ship
       expect(cell.container).to eq ship
     end
+
+    it 'cannot contain more than one object' do
+      cell.container = ship
+      expect { cell.container = ship }.to raise_error
+    end
   end
 end
