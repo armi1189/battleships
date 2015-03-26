@@ -17,4 +17,11 @@ describe Ship do
       expect(ship).not_to be_sunk
     end
   end
+
+  context 'after been created' do
+    it 'can be hit' do
+      ship.hit
+      expect(ship.hit_count).to eq 1
+    end
+  end
 end
