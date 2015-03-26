@@ -1,7 +1,13 @@
 class Cell
-  attr_reader :container
+  attr_reader :container, :hit
+  alias_method :hit?, :hit
 
-  def hit?
+  def initialize
+    @hit = false
+  end
+
+  def hit!
+    @hit = true
   end
 
   def container= ship

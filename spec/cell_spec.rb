@@ -20,5 +20,10 @@ describe Cell do
       cell.container = ship
       expect { cell.container = ship }.to raise_error
     end
+
+    it 'can be hit' do
+      cell.hit!
+      expect(cell).to be_hit
+    end
   end
 end
