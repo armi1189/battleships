@@ -25,5 +25,10 @@ describe Cell do
       cell.hit!
       expect(cell).to be_hit
     end
+
+    it 'cannot be hit twice' do
+      cell.hit!
+      expect { cell.hit! }.to raise_error
+    end
   end
 end
