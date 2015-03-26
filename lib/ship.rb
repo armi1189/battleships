@@ -5,4 +5,7 @@ class Ship
   def initialize(options = {})
     @size = options.fetch(:size, DEFAULT_SIZE)
   end
+
+  def sunk?
+  end
 end

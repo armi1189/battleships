@@ -12,5 +12,9 @@ describe Ship do
       ship = Ship.new size: 4
       expect(ship.size).to eq 4
     end
+
+    it 'is not sunk' do
+      expect(ship).not_to be_sunk
+    end
   end
 end
